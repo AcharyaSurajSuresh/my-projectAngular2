@@ -1,0 +1,45 @@
+.mainBox{ 
+    display: flex;
+    width:350px ;
+    height: 430px;
+}
+.boxOne{
+    width:270px;
+    height: 430px;
+    background-color: orange;
+}
+.One1{
+    width: 200px;
+    height: 50px;
+    padding-top: 110px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.One2{
+    width: 180px;
+    height: 120px;
+    padding-top: 25px;
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.One3{
+    border: 1px solid white;
+    width: 140px;
+    height: 40px;
+    margin-top: 45px;
+    margin-left: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    background-color: white;
+}
+.a1{
+    color: orange;
+    text-decoration:none;
+}

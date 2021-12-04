@@ -1,0 +1,117 @@
+<h1>{{getName("Good Morning")}}</h1>
+<button (click)="click()">clickme</button>
+<br>
+<p>keyUp</p>
+<input type="text" (keyup)="eventUp()">
+<p>keyDown</p>
+<input type="text" (keydown)="eventDown()">
+<p>keyPress</p>
+<input type="text" (keypress)="eventPress()">
+<br>
+<br>
+<input type="text" #box>
+<button (click)="getVal(box.value)">GetValue</button>
+<br><br>
+<input type="text" value={{fname}} disabled={{disabledBox}}> 
+<input type="text" [value]="fname" [disabled]="disabledBox">
+<button (click)="enableInput()">Enable</button> 
+<br><br>
+<input type="text" [placeholder]="placeHolder" [disabled]="disabledBox1">
+<button (click)="enableInput1()">Enable</button> 
+<br><br>
+
+<h1 *ngIf="day else elseBlock">Hello</h1>
+<ng-template #elseBlock>
+    <h1>Bye</h1>
+</ng-template>
+<br>
+
+<h1 *ngIf="day1; then thenblock else elseblock"></h1>
+<ng-template #thenblock>
+    <h1>Good Morning</h1>
+</ng-template>
+<ng-template #elseblock>
+    <h1>Good Night</h1>
+</ng-template>
+<br>
+
+<h1 *ngIf="day2=='Morning'else elseblock1">Gayle</h1>
+<ng-template #elseblock1><h1>Job</h1></ng-template>
+<br><br>
+<app-user-list></app-user-list>
+
+<br><br>
+<hr>
+<h1 *ngIf="dday=='today' else eelseBlock">Mobile</h1>
+<ng-template #eelseBlock><h1>Laptop</h1></ng-template>
+
+<br><br>
+<h2 *ngFor="let arr of arrays">
+    {{arr}}
+</h2>
+
+<br><br>
+<h2 *ngFor="let name of object">
+    {{name.fName}} <br>
+    {{name.age}}
+</h2>
+<hr>
+<h3 [ngSwitch]="person">
+    <h3 *ngSwitchCase="'Mohan'">Hello Mohan</h3>
+    <h3 *ngSwitchCase="'Raju'">Hello Raju</h3>
+    <h3 *ngSwitchCase="'Vijay'">Hello Vijay</h3>
+    <h3 *ngSwitchDefault>Bye Bye</h3>
+</h3>
+<hr>
+<h1>ngStyle</h1>
+<h2 [ngStyle]="{'color':'red'}">Hello</h2>
+<h2 [ngStyle]="{'color':textColor}">Hello</h2>
+<h2 [ngStyle]="{'background-color':bgColor=='black'?'orange':'green'}">Hi</h2>
+<h2 [ngStyle]="{'color':textColor==='black'?'blue':'green'}">Bruce</h2>
+<h2 [ngStyle]="{'font-size':textColor==='black'?'25px':'45px'}">Bruce</h2>
+<hr>
+
+<h1>ngClass</h1>
+<h2 [ngClass]="'changeColor'">Class</h2>
+<h2 [ngClass]="'changeColor backGColor'">Classes</h2>
+<h2 [ngClass]="styleColor">Style</h2>
+<h2 [ngClass]="styleColor=='font'?'bgColor':'changeColor'">Font</h2>
+<hr>
+<hr>
+<h1 appHighlight>Hi</h1>
+<hr>
+<h1>Built-in Pipes</h1>
+<h1>{{'UPPER' | lowercase}}</h1>
+<h1>{{'lower' | uppercase}}</h1>
+<h1>{{'123' | currency}}</h1>
+<h1>{{dateExample | date}}</h1>
+<h1>{{'0.02' | percent}}</h1>
+<h1>{{'0.50' | percent}}</h1>
+<hr>
+<h1>Parameterized Pipes</h1>
+<h1>{{'123' | currency:'INR'}}</h1>
+<h1>{{'123' | currency:'GBP'}}</h1>
+<h1>{{dateExample | date:'short'}}</h1>
+<h1>{{dateExample | date:'long'}}</h1>
+<h1>{{dateExample | date:'dd-MM-yy'}}</h1>
+<h1>{{'0.512' | percent:'2.1-1'}}</h1>
+<h1>{{'0.512' | percent:'2.2-3'}}</h1>
+<h1>{{'0.512' | percent:'3.1-1'}}</h1>
+<hr>
+<h1>Chaining Pipes</h1>
+<h1>{{'123' | currency:'YEN' | lowercase}}</h1>
+<h1 appHighlight>{{dateExample | date |uppercase}}</h1>
+<hr>
+<app-login></app-login>
+<hr>
+<br><br><br><br>
+<div class="hello">
+    <app-form></app-form>
+    <app-form></app-form>
+    <app-form></app-form>
+</div>
+<app-challenge></app-challenge>
+<br>
+<br><br><br><br>
+   
+    <app-nav-bar></app-nav-bar>

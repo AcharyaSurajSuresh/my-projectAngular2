@@ -1,0 +1,32 @@
+.changeColor{
+    color: red;
+}
+.backGColor{
+    color: green;
+}
+.newFont{
+    background-color: hotpink;
+    
+}
+.one{
+    color: red;
+}
+.two{
+    color: blue;
+}
+form{
+    width: 1300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formH{
+    display: flex;
+    justify-content: center;
+
+}
+.hello{
+    display: flex;
+    justify-content: space-evenly;
+}
